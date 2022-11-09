@@ -4,20 +4,14 @@
   "scripts": {
     "build": "npx ts-node build.ts",
     "lint": "npx eslint --ext .ts src/",
-    "lint:tests": "npx eslint --ext .ts spec/",
-    "start": "node -r module-alias/register ./dist --env=production",
-    "dev": "nodemon",
-    "test": "nodemon --config ./spec/nodemon.json",
-    "test:no-reloading": "npx ts-node --files -r tsconfig-paths/register ./spec"
+    "start": "node -r module-alias/register ./dist --env=prod",
+    "dev": "nodemon"
   },
   "nodemonConfig": {
     "watch": [
       "src"
     ],
     "ext": "ts, html",
-    "ignore": [
-      "src/public"
-    ],
     "exec": "./node_modules/.bin/ts-node --files -r tsconfig-paths/register ./src"
   },
   "_moduleAliases": {
@@ -34,12 +28,12 @@
     "express": "^4.18.2",
     "express-async-errors": "^3.1.1",
     "helmet": "^6.0.0",
-    "jet-logger": "^1.2.6",
     "jet-validator": "^1.0.4",
     "jsonfile": "^6.1.0",
     "jsonwebtoken": "^8.5.1",
     "module-alias": "^2.2.2",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "tslog": "^3.3.4"
   },
   "devDependencies": {
     "@types/bcrypt": "^5.0.0",

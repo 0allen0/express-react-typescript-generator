@@ -1,68 +1,10 @@
-import { Router } from 'express';
-import jetValidator from 'jet-validator';
+import { Router, Request, Response } from 'express';
+import HttpStatusCodes from '@src/configurations/HttpStatusCodes';
 
-import adminMw from './shared/adminMw';
-import User from '@src/models/User';
-import authRoutes from './auth-routes';
-import userRoutes from './user-routes';
+const apiRouter = Router();
 
-
-// **** Init **** //
-
-const apiRouter = Router(),
-  validate = jetValidator();
-
-
-// **** Setup auth routes **** //
-
-const authRouter = Router();
-
-// Login user
-authRouter.post(
-  authRoutes.paths.login,
-  validate('email', 'password'),
-  authRoutes.login,
-);
-
-// Logout user
-authRouter.get(authRoutes.paths.logout, authRoutes.logout);
-
-// Add authRouter
-apiRouter.use(authRoutes.paths.basePath, authRouter);
-
-
-// **** Setup user routes **** //
-
-const userRouter = Router();
-
-// Get all users
-userRouter.get(userRoutes.paths.get, userRoutes.getAll);
-
-// Add one user
-userRouter.post(
-  userRoutes.paths.add,
-  validate(['user', User.instanceOf]),
-  userRoutes.add,
-);
-
-// Update one user
-userRouter.put(
-  userRoutes.paths.update,
-  validate(['user', User.instanceOf]),
-  userRoutes.update,
-);
-
-// Delete one user
-userRouter.delete(
-  userRoutes.paths.delete,
-  validate(['id', 'number', 'params']),
-  userRoutes.delete,
-);
-
-// Add userRouter
-apiRouter.use(userRoutes.paths.basePath, adminMw, userRouter);
-
-
-// **** Export default **** //
+apiRouter.get('/heart', (req: Request, res: Response) => {
+  res.status(HttpStatusCodes.OK).send('boom');
+});
 
 export default apiRouter;

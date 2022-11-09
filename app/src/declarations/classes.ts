@@ -1,6 +1,5 @@
 import HttpStatusCodes from '@src/configurations/HttpStatusCodes';
 
-
 /**
  * Error with status code and message
  */

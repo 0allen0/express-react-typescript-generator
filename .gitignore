@@ -1,3 +1,4 @@
 **/node_modules
 app/dist/
 **/**/*.log
+.DS_Store

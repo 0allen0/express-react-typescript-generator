@@ -1,3 +1,4 @@
 {
-    "eslint.workingDirectories": ["./app" ]
+    "eslint.workingDirectories": ["./app" ],
+    "prettier.configPath": "./app/.prettierrc.json"
 }
