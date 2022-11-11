@@ -1281,11 +1281,6 @@ http-errors@2.0.0:
     statuses "2.0.1"
     toidentifier "1.0.1"
 
-http-status-ts@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/http-status-ts/-/http-status-ts-2.0.0.tgz#38a982b8c41948e8890dc5665f34a054868fc72a"
-  integrity sha512-I7AaJa0nIETZr6mXUDUeFwBsFkHI84dPCg5Y2eifLffAGfQRMWlXtrnfgsb9H997GctvNodcWy3Q0M7pHschkg==
-
 https-proxy-agent@^5.0.0:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/https-proxy-agent/-/https-proxy-agent-5.0.1.tgz#c59ef224a04fe8b754f3db0063a25ea30d0005d6"
