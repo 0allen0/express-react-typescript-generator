@@ -6,20 +6,16 @@ const log: Logger = new Logger();
 
 (async () => {
   try {
-    // Remove current build
     await remove('./dist/');
-    // Copy front-end files
     await copy('./src/views', './dist/views');
-    // Copy back-end files
     await exec('tsc --build tsconfig.prod.json', './');
+    await exec('tsc-alias -p tsconfig.prod.json', './');
+    await exec('pkg package.json', '');
   } catch (err) {
     log.error(err);
   }
 })();
 
-/**
- * Remove file
- */
 function remove(loc: string): Promise<void> {
   return new Promise((res, rej) => {
     return fs.remove(loc, (err) => {
@@ -28,9 +24,6 @@ function remove(loc: string): Promise<void> {
   });
 }
 
-/**
- * Copy file.
- */
 function copy(src: string, dest: string): Promise<void> {
   return new Promise((res, rej) => {
     return fs.copy(src, dest, (err) => {
@@ -39,9 +32,6 @@ function copy(src: string, dest: string): Promise<void> {
   });
 }
 
-/**
- * Do command line command.
- */
 function exec(cmd: string, loc: string): Promise<void> {
   return new Promise((res, rej) => {
     return childProcess.exec(cmd, { cwd: loc }, (err, stdout, stderr) => {
