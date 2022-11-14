@@ -19,20 +19,16 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
-// Show routes called in console during development
 if (EnvVars.nodeEnv === NodeEnvs.Dev) {
   app.use(morgan('dev'));
 }
 
-// Security
 if (EnvVars.nodeEnv === NodeEnvs.Prod) {
   app.use(helmet());
 }
 
-// Add APIs
 app.use('/api', BaseRouter);
 
-// Setup error handler
 app.use(
   (
     err: Error,
@@ -50,13 +46,16 @@ app.use(
   }
 );
 
-// Set views directory (html)
-const viewsDir = path.join(__dirname, 'views');
-app.set('views', viewsDir);
+const root = path.join(__dirname, './build');
 
+app.use('/', express.static(root));
 // Nav to login pg by default
-app.get('/', (_: Request, res: Response) => {
-  res.sendFile('test.html', { root: viewsDir });
+app.get('*', function (req: Request, res: Response) {
+  res.sendFile(path.join(__dirname, './build', 'index.html'), function (err) {
+    if (err) {
+      res.status(500).send(err);
+    }
+  });
 });
 
 export default app;

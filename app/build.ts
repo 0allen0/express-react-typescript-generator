@@ -7,7 +7,7 @@ const log: Logger = new Logger();
 (async () => {
   try {
     await remove('./dist/');
-    await copy('./src/views', './dist/views');
+    await copy('./src/build', './dist/build');
     await exec('tsc --build tsconfig.prod.json', './');
     await exec('tsc-alias -p tsconfig.prod.json', './');
     await exec('pkg package.json', '');

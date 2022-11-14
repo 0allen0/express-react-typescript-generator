@@ -1,5 +1,6 @@
 **/node_modules
 app/dist/
+**/build
 **/**/*.log
 .DS_Store
 app/pkg/**
