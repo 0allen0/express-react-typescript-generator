@@ -2,3 +2,5 @@
 .vscode
 .gitignore
 README.md
+*/build
+*/pkg
