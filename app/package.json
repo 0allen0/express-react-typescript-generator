@@ -20,12 +20,17 @@
   "engines": {
     "node": ">=8.10.0"
   },
-  "pkg":{
-    "assets": ["env/**/*","dist/**/*"],
-    "targets": [ "node14-mac-arm64" ],
+  "pkg": {
+    "assets": [
+      "env/**/*",
+      "dist/**/*"
+    ],
+    "targets": [
+      "node14-linux-arm64"
+    ],
     "outputPath": "pkg"
   },
-  "bin":{
+  "bin": {
     "pkg": "./dist/index.js"
   },
   "dependencies": {
@@ -65,6 +70,7 @@
     "fs-extra": "^10.1.0",
     "jasmine": "^4.5.0",
     "nodemon": "^2.0.20",
+    "pkg": "^5.8.0",
     "prettier": "2.7.1",
     "supertest": "^6.3.1",
     "ts-node": "^10.9.1",
