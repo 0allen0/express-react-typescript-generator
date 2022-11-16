@@ -1,8 +1,5 @@
 import HttpStatusCodes from '@src/configurations/HttpStatusCodes';
 
-/**
- * Error with status code and message
- */
 export class RouteError extends Error {
   status: HttpStatusCodes;
   constructor(status: HttpStatusCodes, message: string) {

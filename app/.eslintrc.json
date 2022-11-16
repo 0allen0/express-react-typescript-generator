@@ -12,13 +12,10 @@
     "project": "./tsconfig.json"
   },
   "rules": {
-    "no-console": 1,
     "no-extra-boolean-cast": 0,
-    "semi": 1,
     "indent": ["warn", 2],
     "@typescript-eslint/no-misused-promises": 0,
     "@typescript-eslint/no-floating-promises": 0,
-    "node/no-process-env": 1,
     "node/no-unsupported-features/es-syntax": ["error", { "ignores": ["modules"] }],
     "node/no-missing-import": 0,
     "node/no-unpublished-import": 0
