@@ -1,0 +1,13 @@
+{
+  "name": "express-react-typescript-generator",
+  "version": "0.0.1",
+  "main": "bin/cli.js",
+  "bin": {
+    "express-react-typescript-generator": "bin/cli.js"
+  },
+  "author": "allen qu",
+  "license": "MIT",
+  "dependencies": {
+    "fs-extra": "^10.1.0"
+  }
+}
