@@ -35,7 +35,7 @@ npx express-react-typescript-generator "project name" --yarn
 
 Then you will get a sample project with react and express `(typescript)`
 
-## Run locally
+## Run local
 
 #### `Run express server in /app`
 
