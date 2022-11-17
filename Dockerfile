@@ -4,12 +4,10 @@ RUN apk add yarn
 
 WORKDIR /server/web
 COPY ./web/package.json .
-COPY ./web/yarn.lock .
 RUN yarn
 
 WORKDIR /server/app
 COPY ./app/package.json .
-COPY ./app/yarn.lock .
 RUN yarn
 
 WORKDIR /server

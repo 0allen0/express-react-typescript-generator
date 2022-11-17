@@ -30,12 +30,17 @@ async function generate() {
     await copy('../.dockerignore', name + '/.dockerignore');
     await copy('../.gitignore', name + '/.gitignore');
     await copy('../Dockerfile', name + '/Dockerfile');
+    await copy('../doc/README_GEN.md', name + '/README.md');
     console.log('Install package files ...');
     if (yarn) {
+      console.log('Start yarn install web package resources ...');
       childProcess.execSync('yarn', { cwd: name + '/web' });
+      console.log('Start yarn install app package resources ...');
       childProcess.execSync('yarn', { cwd: name + '/app' });
     } else {
+      console.log('Start npm install web package resources ...');
       childProcess.execSync('npm install', { cwd: name + '/web' });
+      console.log('Start npm install app package resources ...');
       childProcess.execSync('npm install', { cwd: name + '/app' });
     }
   } catch (err) {
