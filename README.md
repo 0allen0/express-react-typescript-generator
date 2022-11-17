@@ -37,7 +37,7 @@ Then you will get a sample project with react and express `(typescript)`
 
 ## Run locally
 
-#### `Run express server in /app`
+#### Run express server in `/app`
 
 ```
 npm start
@@ -49,7 +49,7 @@ or
 yarn start
 ```
 
-#### `Run react in /web`
+#### Run react in `/web`
 
 ```
 npm start
