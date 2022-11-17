@@ -1,6 +1,6 @@
 {
   "name": "express-react-typescript-generator",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "bin/cli.js",
   "bin": {
     "express-react-typescript-generator": "bin/cli.js"
