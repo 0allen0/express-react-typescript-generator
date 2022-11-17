@@ -1,6 +1,6 @@
 {
   "name": "express-react-typescript-generator",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "bin/cli.js",
   "bin": {
     "express-react-typescript-generator": "bin/cli.js"
@@ -9,5 +9,30 @@
   "license": "MIT",
   "dependencies": {
     "fs-extra": "^10.1.0"
-  }
+  },
+  "keywords": [
+    "express",
+    "ex",
+    "generator",
+    "generate",
+    "gen",
+    "typescript",
+    "ts",
+    "types",
+    "typing",
+    "js",
+    "new",
+    "app",
+    "pkg",
+    "react",
+    "create-react-app"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0allen0/express-react-typescript-generator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/0allen0/express-react-typescript-generator/issues"
+  },
+  "homepage": "https://github.com/0allen0/express-react-typescript-generator#readme"
 }
