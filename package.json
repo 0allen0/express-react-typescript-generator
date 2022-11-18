@@ -1,10 +1,11 @@
 {
   "name": "express-react-typescript-generator",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "main": "bin/cli.js",
   "bin": {
     "express-react-typescript-generator": "bin/cli.js"
   },
+  "description": "Generate project with express/react/typescript.",
   "author": "allen qu",
   "license": "MIT",
   "dependencies": {
