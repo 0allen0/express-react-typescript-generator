@@ -28,7 +28,7 @@ async function generate() {
     await copy('../web', name + '/web');
     await copy('../app', name + '/app');
     await copy('../.dockerignore', name + '/.dockerignore');
-    await copy('../.gitignore', name + '/.gitignore');
+    await copy('../doc/.gitignore_gen', name + '/.gitignore');
     await copy('../Dockerfile', name + '/Dockerfile');
     await copy('../doc/README_GEN.md', name + '/README.md');
     console.log('Install package files ...');
